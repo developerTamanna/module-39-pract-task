@@ -1,11 +1,11 @@
 import { useState } from "react"
 
 export default function ShowHideText(){
-   const [isVisible, setVisible]= useState(false);
+   const [visible, setVisible]= useState(false);
 
 
    function toggleText(){
-    if(isVisible){
+    if(visible=== true){
         setVisible(false)
     }
     else{
@@ -16,12 +16,12 @@ export default function ShowHideText(){
         <div>
             <button onClick={toggleText}>
                  {
-                    isVisible? "hide": "show"
+                    visible? "hide": "show"
                 } 
                 Text</button>
 
                 {
-                    isVisible && <h3>hello react lerner</h3>
+                    visible && <h3>hello react lerner</h3>
                 }
         </div>
     )
